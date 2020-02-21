@@ -1,8 +1,20 @@
-.log-list {
-  display: flex;
-  flex-direction: column;
-  padding: 40rpx;
+.box1 {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  background-color: pink;
 }
-.log-item {
-  margin: 10rpx;
+.hover_view {
+  background-color: red;
+}
+.box2{
+  width: 200px;
+  height: 200px;
+  background-color: green;
+}
+.hover_view2{
+  background-color: yellow;
+}
+image{
+  width: 100%;
 }

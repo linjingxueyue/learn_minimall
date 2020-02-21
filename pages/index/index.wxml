@@ -1,4 +1,28 @@
+<text>------------selectable--------------</text>
+<!-- 默认 情况下 text中的文本是不能选中的。 -->
+<text>hello world--不能选中\n</text>
+<text selectable="{{true}}">hello linjing ----能选中 \n</text>
+<text selectable>hello linjing ----能选中 \n</text>
+<text>------------space--------------</text>
+<!-- space 决定 空格的大小
+    ensp: 半个中文字符大小
+    emsp: 一个中文字符大小
+ -->
+<text >hello world \n</text>
+<text space="nbsp">hello world \n</text>
+<text space="ensp">hello world \n</text>
+<text space="emsp">hello world \n</text>
 
-<view>
-{{name}}
-</view>
+<text>------decode: 是否解码文本 ------</text>
+<text > 5 &gt; 3 \n</text>
+<text decode> 5 &gt; 3 \n</text>
+
+<text>------------button--------------</text>
+<button >按钮</button>
+<button size="mini">按钮</button>
+<button size="mini" type="primary">primary按钮</button>
+<button size="mini" type="warn">warn按钮</button>
+<button size="mini" type="default">default按钮</button>
+<button size="mini" plain>palin按钮</button>
+<button size="mini" loading>loading按钮</button>
+<button hover-class="hover">hover按钮</button>

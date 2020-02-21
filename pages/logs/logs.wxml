@@ -1,6 +1,19 @@
-<!--logs.wxml-->
-<view class="container log-list">
-  <block wx:for="{{logs}}" wx:for-item="log">
-    <text class="log-item">{{index + 1}}. {{log}}</text>
-  </block>
+<text>------------------- view  -------------------</text>
+<!-- hover-stop-propagation: 阻止冒泡 -->
+<view class="box2" hover-class="hover_view2" hover-start-time="{{0}}" hover-stay-time="{{0}}">
+  <view hover-class="hover_view" class="box1" hover-stop-propagation="{{true}}" hover-start-time="{{0}}" hover-stay-time="{{0}}">
+    box1
+  </view>
 </view>
+
+<text>------------------- image  -------------------</text>
+<!-- 
+  image组件 默认有自己的大小 320 x 240 
+  相对路径 与绝对路径都可以
+  -->
+<image src="../../images/home/recommend_bg.jpg"></image>
+<image src="/images/home/recommend_bg.jpg" mode="aspectFit" show-menu-by-longpress></image>
+<button bindtap="selectimage" type="primary" mode="aspectFit">选中图片</button>
+<image src="{{imagepath}}" mode="aspectFit"></image>
+<image src="{{imagepath}}" mode="aspectFill"></image>
+<image src="{{imagepath}}" mode="widthFix"></image>

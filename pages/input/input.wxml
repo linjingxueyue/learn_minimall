@@ -1,0 +1,16 @@
+<!--pages/input/input.wxml-->
+<input />
+<!-- value 默认值 -->
+<input value="默认值" />
+<!-- type:决定键盘的类型 （英文\数字） -->
+<input type="text" value="文本键盘"/>
+<input type="number" value="数字键盘"/>
+<input type="idcard" value="输入身份证的键盘"/>
+<input type="digit" value="输入带小数点的数字键盘"/>
+<!-- password: 密码类型 -->
+<input  password value='密码'/>
+<input  placeholder="占位文字"/>
+<!-- confirm-type： 设置键盘右下角按钮的文字，仅在 type=text 时候有效 -->
+<input confirm-type="search"  type="text"/>
+
+
