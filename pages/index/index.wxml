@@ -1,6 +1,4 @@
 
-<text>hello world</text>
-<button size="mini">按钮</button>
-<button size="mini">按钮</button>
-<button size="mini">按钮</button>
-<button size="mini">按钮</button>
+<view>
+{{name}}
+</view>
