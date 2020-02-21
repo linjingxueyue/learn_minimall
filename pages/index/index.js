@@ -1,14 +1,38 @@
 //index.js
-//获取应用实例
-Page({
 
+//获取应用实例对象
+var app = getApp()
+console.log("全局对象",app.globalData.age)
+var gloal_age = app.globalData.age
+var gloal_name = app.globalData.name
+
+
+Page({
   /**
    * 页面的初始数据
    */
   data: {
-    name:'linjing'
+    name:'linjing',
+    movies:['金属','奎因','阿卡丽'],
+    counter:0
   },
-
+  btnclickadd(){
+    // 1: 错误做法，此时界面 不会更新，尽管数值已经发生改变
+    // console.log('btnclick', this.data.counter)
+    // this.data.counter +=1;
+    // 2： 正确做法
+    this.setData({
+      counter: this.data.counter +=1
+    })
+  },
+  btnclicksub(){
+    this.setData({
+      counter: this.data.counter -= 1
+    })
+  },
+  btnclick_getuserinfo(event){
+    console.log('btnclick_getuserinfo: ',event.detail)
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -27,14 +51,14 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+    console.log('index pages onShow')
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-    
+    console.log('index pages hide')
   },
 
   /**

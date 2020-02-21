@@ -1,6 +1,31 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
-  ]
+    "pages/logs/logs",
+    "pages/catrgory/category"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ff5777",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "linjing的小程序",
+    "backgroundColor": "blue",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "selectedColor": "#ff5777",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "images/tabbar/home.png",
+        "selectedIconPath": "images/tabbar/home_active.png"
+      },
+      {
+        "pagePath": "pages/catrgory/category",
+        "text": "分类",
+        "iconPath": "images/tabbar/category.png",
+        "selectedIconPath": "images/tabbar/category_active.png"
+      }
+    ]
+  }
 }
