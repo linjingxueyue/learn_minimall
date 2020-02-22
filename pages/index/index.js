@@ -1,3 +1,4 @@
+var app = getApp()
 //index.js
 //获取应用实例
 Page({
@@ -6,7 +7,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    code:'',
+    token: ''
   },
 
   /**
@@ -20,7 +22,10 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+    this.setData({
+      code: app.globalData.code,
+      token: app.globalData.token
+    })
   },
 
   /**

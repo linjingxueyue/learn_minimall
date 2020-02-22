@@ -2,3 +2,6 @@ text{
   color: red;
   font-size: 30px;
 }
+#box1{
+  white-space: pre-wrap;
+}
