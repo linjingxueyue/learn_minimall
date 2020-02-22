@@ -1,16 +1,15 @@
-<!--index.wxml-->
-<!-- <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-</view> -->
+<my-tabbar titles="{{titles}}" />
+<text>-----------------------------------</text>
+<my-cpn message="linjing1" titleclass='red'></my-cpn>
+<text>-----------------------------------</text>
+<my-cpn message="linjing2" titleclass='green'></my-cpn>
+<text>-----------------------------------</text>
+<my-cpn titleclass='green'></my-cpn>
+<text>-----------------------------------</text>
+<view>
+  <my-cpn class="select-mycpn" message="自定义点击事件" titleclass='blue' bind:add_click="add_click"></my-cpn>
 
-<text>hello world</text>
-<button size="mini">按钮</button>
+  当前计数：{{counter}} ----- 点击组件内部+按钮
+</view>
+<text>---------当前页面修改my-cpn组件的title------</text>
+<button bind:tap="update_btnclick" type="primary">修改my-cpn组件的title</button>
