@@ -1,19 +1,49 @@
-<!--index.wxml-->
-<!-- <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-</view> -->
+<!-- 行内样式 -->
+<view style="color:red; background-color:blue;font-size:20px" >
+  linjing
+</view>
+<!-- 页内样式 -->
+<view class="box1">
+  linjing
+</view>
+<!-- 全局样式 是放在app.wxss里面-->
+<view class="global_box">
+  linjing
+</view>
 
-<text>hello world</text>
-<button size="mini">按钮</button>
-<button size="mini">按钮</button>
-<button size="mini">按钮</button>
-<button size="mini">按钮</button>
+<!-- wxss中的单位 rpx-->
+<view class="box2">box2</view>
+<view class="box3">box3</view>
+<view class="box4">box4</view>
+<view class="box5">box5</view>
+<view>
+  <view wx:for='{{obj}}' wx:key="index">{{item}}----{{index}}</view>
+  <view wx:for='{{obj}}' wx:for-item='item2' wx:for-index='key' wx:key="index">{{item2}}----{{key}}</view>
+</view>
+
+<view>------------------template-------------</view>
+<!-- <template name="template_test">
+  <button type="primary">{{btnText}}</button>
+  <view>{{viewText}}</view>
+</template> -->
+<import src="../../wxml/template.wxml" />
+<template is="template_test" data="{{btnText:'按钮',viewText:'测试'}}"/>
+
+
+<view>------------------ wxs -------------</view>
+<!--
+  直接在 WXML中定义
+ <wxs module='info'>
+  var message = 'hello WXS'
+  function sum(n1,n2){
+    return n1+n2
+  }
+  module.exports = {message:message,sum:sum}
+</wxs> -->
+<!-- 第2种方式 -->
+<wxs src="../../WXS/info.wxs" module="info"/>
+<view>{{info.message}}</view>
+<view>{{info.sum(10,20)}}</view>
+
+<view>------------------ input -------------</view>
+<input value="ceshi" bind:input = 'input' bindfocus="focus" bindblur="blur"></input>

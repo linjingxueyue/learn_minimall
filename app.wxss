@@ -1,0 +1,30 @@
+.global_box{
+  color: blue;
+  font-size: 25px;
+  background-color: red;
+}
+.box2{
+  width: 100px;
+  height: 100px;
+  background-color:yellow;
+  margin: 10px;
+  text-align: center;
+  box-sizing: border-box;
+  line-height: 100px;
+}
+
+.box3{
+  width: 200rpx;
+  height: 200rpx;
+  background-color:yellow;
+  margin: 20rpx;
+  text-align: center;
+  box-sizing: border-box;
+  line-height: 200rpx;
+}
+.box4{
+  font-size: 20px;
+}
+.box5{
+  font-size: 40rpx;
+}

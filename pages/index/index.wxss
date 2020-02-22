@@ -1,4 +1,9 @@
-text{
-  color: red;
-  font-size: 30px;
+.box1{
+  color: white;
+  font-size: 32px;
+  background-color: black;
+}
+input{
+  border: 1px solid red;
+  margin: 10px;
 }
